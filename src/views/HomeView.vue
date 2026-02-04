@@ -2,7 +2,7 @@
 import EventCard from '@/components/EventCard.vue'
 import { ref } from 'vue'
 
-const event = ref([
+const events = ref([
   {
     id: 5928101,
     category: 'animal welfare',
@@ -43,7 +43,17 @@ const event = ref([
 
 <template>
   <main>
-    <div class="home"></div>
-    <EventCard />
+    <h1>Envents For Good</h1>
+    <div class="events">
+      <EventCard v-for="event in events" :key="event.id" :event="event" />
+    </div>
   </main>
 </template>
+
+<style scoped>
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>

@@ -4,23 +4,21 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
-    <div id="layout"></div>
-
-    <div class="wrapper">
-      <!-- <HelloWorld msg="You did it!" /> -->
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>&nbsp;|&nbsp;
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <div id="layout">
+    <header>
+      <div class="wrapper">
+        <!-- <HelloWorld msg="You did it!" /> -->
+        <nav>
+          <RouterLink to="/">Home</RouterLink>&nbsp;|&nbsp;
+          <RouterLink to="/about">About</RouterLink>
+        </nav>
+      </div>
+    </header>
+    <RouterView />
+  </div>
 </template>
 
-<style scoped>
+<style>
 #layout {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -37,5 +35,8 @@ nav a {
 }
 nav a.router-link-exact-active {
   color: #42b983;
+}
+h2 {
+  font-size: 20px;
 }
 </style>

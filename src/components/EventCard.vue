@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 defineProps({
-  msg: {
-    type: String,
+  event: {
+    type: Object,
     required: true,
   },
 })
